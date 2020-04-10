@@ -1,5 +1,5 @@
 {
-  "name": "f2reactize",
+  "name": "@talbot3/f2reactize",
   "version": "1.2.1",
   "description": "react移动端图表库",
   "main": "./lib/index.js",
