@@ -13,3 +13,7 @@
 ```
 npm install @talbot3/f2reactize@1.2.1 --registry=https://npm.pkg.github.com/talbot3
 ```
+
+## 示例
+
+- [line chart](https://github.com/Talbot3/F2Reactize/blob/master/demo/Line/index.jsx)
