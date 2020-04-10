@@ -3,6 +3,7 @@
   "version": "1.2.1",
   "description": "react移动端图表库",
   "main": "./lib/index.js",
+  "private": false,
   "scripts": {
     "prepublish": "npm run compile",
     "compile": "rm -rf lib && babel src --out-dir lib && npm run umd",
@@ -15,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ant-design/ant-design-mobile-chart.git"
+    "url": "git+https://github.com/Talbot3/F2Reactize.git"
   },
   "keywords": [
     "chart",
