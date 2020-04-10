@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Chart, Legend, Coord, Interval, Guide, Tooltip, Axis, F2 } from 'f2reactize';
+import { Chart, Legend, Coord, Interval, Guide, Tooltip, Axis, F2, util } from 'f2reactize';
+
+const AutoChart = util.autoWidth(Chart);
 const { Group, Shape } = F2.G;
 
 const data = [
@@ -110,14 +112,14 @@ class PieDemo extends Component {
     };
     const itemFormatter = val => { return val + '  ' + legendMapData[val]; };
     return <div>
-      <Chart source={data} onRendered={this.onRendered} width={375} height={250} pixelRatio={window.devicePixelRatio}>
+      <AutoChart source={data} onRendered={this.onRendered} height={250} pixelRatio={window.devicePixelRatio}>
         <Coord type="polar" transposed={true} innerRadius={0.8} radius={0.8} />
         <Axis enable={false} />
         <Interval position="a*proportion" color="name" adjust="stack" animate={animate}/>
         <Guide type="html" position={[ '50%', '50%' ]} html={html} />
         <Legend position="bottom" marker={marker} itemFormatter={itemFormatter} align="center" />
         <Tooltip showItemMarker={false} />
-      </Chart>
+      </AutoChart>
     </div>;
   }
 }
