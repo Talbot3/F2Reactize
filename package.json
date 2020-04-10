@@ -4,6 +4,7 @@
   "description": "react移动端图表库",
   "main": "./lib/index.js",
   "private": false,
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "prepublish": "npm run compile",
     "compile": "rm -rf lib && babel src --out-dir lib && npm run umd",
