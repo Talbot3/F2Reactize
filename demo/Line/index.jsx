@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Chart, Line, Scale, Guide ,ScrollBar} from 'f2reactize';
+import { Chart, Line, Scale, Guide ,ScrollBar, util} from 'f2reactize';
 
-
+const AutoChart = util.autoWidth(Chart);
 const data = [
   {
     "reportDateTimestamp": 1529856000000,
@@ -147,10 +147,13 @@ const data = [
 
 
 class LineDemo extends Component {
+  componentDidMount() {
+
+  }
   render() {
     return (
       <div>
-        <Chart source={data} width="400" height="200" pixelRatio={window.devicePixelRatio}>
+        <AutoChart source={data}  height="200" pixelRatio={window.devicePixelRatio}>
           <Line position="reportDateTimestamp*rate" color="codeType"/>
           <Scale field="reportDateTimestamp" range={[0, 1]} tickCount={3} type="timeCat" mask="MM-DD" />
           <Scale field="rate" tickCount={5} formatter={(rate) => `${(rate*100).toFixed(2)}%`} />
@@ -160,7 +163,7 @@ class LineDemo extends Component {
             fillerColor: '#808080',
             offsetY: -2
           }} />
-        </Chart>
+        </AutoChart>
       </div>
     );
   }
