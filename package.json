@@ -1,10 +1,10 @@
 {
-  "name": "@talbot3/f2reactize",
+  "name": "f2reactize",
   "version": "1.2.1",
   "description": "react移动端图表库",
   "main": "./lib/index.js",
   "private": false,
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": { "registry": "https://registry.npmjs.org" },
   "scripts": {
     "prepublish": "npm run compile",
     "compile": "rm -rf lib && babel src --out-dir lib && npm run umd",
