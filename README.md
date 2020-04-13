@@ -11,7 +11,7 @@
 ## 安装
 
 ```
-npm install @talbot3/f2reactize@1.2.1 --registry=https://npm.pkg.github.com/talbot3
+npm install @talbot3/f2reactize@1.2.1
 ```
 
 ## 示例
